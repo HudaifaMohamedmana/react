@@ -15,8 +15,10 @@ function App() {
   return (
     <>
     <Display counter={counter}/>
-    <Button setCounter={setCounter} />
-        </>
+    <Button setCounter={setCounter} label="Increment" operation="increase" />
+    <Button setCounter={setCounter} label="Decrement" operation="decrease" />
+
+    </>
   )
 }
 

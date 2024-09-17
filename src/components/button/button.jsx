@@ -1,13 +1,16 @@
-export default function Button({setCounter}) {
-
-    return(
-
-        <>
-        <button onClick={()=> setCounter((state) => state += 1)}> 
-            Increment
-            </button>
-        </>
-    )
-
-    
-}
+export default function Button({ setCounter, label, operation }) {
+    const handleClick = () => {
+      if (operation === "increase") {
+        setCounter((prev) => prev + 1);
+      } else {
+        setCounter((prev) => prev - 1);
+      }
+    };
+  
+    return (
+      <>
+        <button onClick={handleClick}>{label}</button>
+      </>
+    );
+  }
+  
